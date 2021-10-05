@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "694305066570",
+    "project_id": "pntest-bf307",
+    "storage_bucket": "pntest-bf307.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:694305066570:android:c42236d2b118e94556a0b3",
+        "android_client_info": {
+          "package_name": "com.obq.pntest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "694305066570-52hm99miknev1kk0cqrf19hq33626ncs.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCBQL9dh4Ci-CvnIcm9Pr6htvdCSmL6Ww8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "694305066570-52hm99miknev1kk0cqrf19hq33626ncs.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

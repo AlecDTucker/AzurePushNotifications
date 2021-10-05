@@ -1,0 +1,33 @@
+﻿<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PNTest.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
+            <StackLayout>
+                <Label Text="Push Notification Testing" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+                <Label Text="Hub Name:" HorizontalTextAlignment="Start" TextColor="White" FontSize="12" />
+                <Label Text="{Binding HubName}" HorizontalTextAlignment="Start" TextColor="White" FontSize="12" />
+            </StackLayout>
+        </Frame>
+
+        <Label Text="Tags subscribed to:"
+               FontSize="Title"
+               Padding="30,10" />
+        <Editor Text="{Binding CurrentTags}" />
+
+        <Label Text="Enter a tag to add:"
+               FontSize="Title"
+               Padding="30,10"/>
+        <Entry Text="{Binding NewTag}" />
+
+        <Button Text="Add"
+                Command="{Binding AddTagCommand}" />
+
+        <Button Text="Clear"
+                Command="{Binding ClearTagsCommand}" />
+
+        <Button Text="Refresh"
+                Command="{Binding RefreshTagsCommand}" />
+    </StackLayout>
+</ContentPage>
