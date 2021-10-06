@@ -14,7 +14,7 @@
         <Label Text="Tags subscribed to:"
                FontSize="Title"
                Padding="30,10" />
-        <Editor Text="{Binding CurrentTags}" />
+        <CollectionView ItemsSource="{Binding CurrentTags}" />
 
         <Label Text="Enter a tag to add:"
                FontSize="Title"
