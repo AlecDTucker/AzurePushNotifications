@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows.Input;
@@ -55,8 +54,8 @@ namespace PNTest
         private string _newTag;
         public string NewTag { get => _newTag; set => SetProperty(ref _newTag, value); }
 
-        private string _currentTags;
-        public string CurrentTags { get => _currentTags; set => SetProperty(ref _currentTags, value); }
+        private ObservableCollection<string> _currentTags;
+        public ObservableCollection<string> CurrentTags { get => _currentTags; set => SetProperty(ref _currentTags, value); }
         #endregion
 
         #region Commands
@@ -90,16 +89,7 @@ namespace PNTest
 
         private void RefreshTags()
         {
-            List<string> tags = notificationHubService.GetTags();
-            CurrentTags = string.Empty;
-            if (tags?.Count > 0)
-            {
-                foreach (string tag in tags)
-                {
-                    string prefix = string.IsNullOrWhiteSpace(CurrentTags) ? string.Empty : Environment.NewLine;
-                    CurrentTags = $"{prefix}{tag}";
-                }
-            }
+            CurrentTags = new ObservableCollection<string>(notificationHubService.GetTags());
         }
         #endregion
 
